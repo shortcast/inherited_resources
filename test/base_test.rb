@@ -28,8 +28,8 @@ module UserTestHelper
   def setup
     @controller_class    = Class.new(UsersController)
     @controller          = @controller_class.new
-    @controller.request  = @request  = ActionController::TestRequest.new
-    @controller.response = @response = ActionController::TestResponse.new
+    @controller.request  = @request  = ActionController::TestRequest.create
+    @controller.response = @response = ActionDispatch::TestResponse.new
     @controller.stubs(:user_url).returns("/")
   end
 

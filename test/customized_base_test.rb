@@ -37,8 +37,8 @@ end
 module CarTestHelper
   def setup
     @controller          = CarsController.new
-    @controller.request  = @request  = ActionController::TestRequest.new
-    @controller.response = @response = ActionController::TestResponse.new
+    @controller.request  = @request  = ActionController::TestRequest.create
+    @controller.response = @response = ActionDispatch::TestResponse.new
     @controller.stubs(:car_url).returns("/")
   end
 

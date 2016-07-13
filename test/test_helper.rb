@@ -6,6 +6,7 @@ Bundler.setup
 require 'minitest/autorun'
 require 'mocha/mini_test'
 require 'minitest/rg'
+require 'rails-controller-testing'
 
 ENV["RAILS_ENV"] = "test"
 RAILS_ROOT = "anywhere"
